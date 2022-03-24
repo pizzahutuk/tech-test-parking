@@ -1,7 +1,7 @@
-import { isPalindrome } from "../src/index";
+import { isPalindrome } from '../src/index';
 
 describe('Palindrome', () => {
-    it('is a palindrome', () => {
-        expect(isPalindrome()).toBe(true);
-    });
+  it('is a palindrome', () => {
+    expect(isPalindrome()).toBe(true);
+  });
 });

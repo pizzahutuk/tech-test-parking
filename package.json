@@ -6,7 +6,7 @@
     "build": "tsc -b",
     "build:watch": "tsc -b",
     "lint": "eslint \"**/{src,apps,libs,test}/**/*.ts\" --fix",
-    "format": "prettier --write \"**/src/**/*.ts\" \"**/test/**/*.ts\"",
+    "format": "prettier --write \"**/src/**/*.ts\" \"**/tests/**/*.ts\"",
     "test": "jest",
     "test:watch": "jest --watch"
   },
