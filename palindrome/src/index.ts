@@ -1,5 +1,5 @@
 function isPalindrome(): boolean {
-  return true;
+  return false;
 }
 
 export { isPalindrome };
