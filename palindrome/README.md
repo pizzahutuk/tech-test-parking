@@ -24,6 +24,7 @@
 ```
  
 ## Create a solution that fulfils the following requirements:
+Note: treat this as if this is production code and something that you would be responsible for maintaining
 
 1. Validates if an input string is a palindrome
 
@@ -41,5 +42,4 @@
 ## Tips:
 
 - Please don’t worry about the UI
-- Write tests
 – Keep it simple and avoid redundant code
