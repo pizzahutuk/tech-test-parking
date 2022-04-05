@@ -12,14 +12,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && lint-staged",
-      "pre-push": "yarn test"
+      "pre-commit": "npm build && lint-staged",
+      "pre-push": "npm test"
     }
   },
   "lint-staged": {
     "**/(test|src)/**/*.+(js|ts|jsx|tsx)": [
-      "yarn lint",
-      "yarn format"
+      "npm lint",
+      "npm format"
     ]
   },
   "dependencies": {},
