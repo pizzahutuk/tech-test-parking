@@ -23,15 +23,8 @@
     },
     "exclude": [
         "node_modules",
-        "test",
         "dist",
         "bin",
-        "src/**/__tests__/**/*",
-        "src/**/__mocks__/**/*",
-        "**/*.spec.ts",
-        "**/*.spec.js",
-        "**/*.test.ts",
-        "**/*.test.js"
       ],
   }
   

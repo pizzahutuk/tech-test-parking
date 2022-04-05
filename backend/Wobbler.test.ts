@@ -1,4 +1,4 @@
-import { wibble, wibble2, Wobbler } from '../src/Wobbler';
+import { wibble, wibble2, Wobbler } from './Wobbler';
 
 test('supports wibble', () => {
   expect(wibble()).toBe(true);
@@ -12,6 +12,6 @@ describe('Wobbler', function () {
   it('wobbles', async () => {
     const wobbler = new Wobbler();
     const result = await wobbler.wobble();
-    expect(result).toEqual({});
+    expect(result).toEqual(1);
   });
 });

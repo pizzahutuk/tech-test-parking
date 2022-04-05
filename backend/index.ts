@@ -1,3 +1,5 @@
+// EXAMPLE ONLY. REMOVE OR EDIT AS NEEDED.
+
 import * as express from 'express';
 import routes from './routes';
 import * as cors from 'cors';
