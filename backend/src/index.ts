@@ -1,13 +1,12 @@
-export const wibble = () => {
-  return true;
-};
+import * as express from 'express';
+import routes from './routes';
+import cors from 'cors';
 
-export function wibble2() {
-  return false;
-}
+const app = express();
+const port = process.env.PORT || 8080;
 
-export class Wobbler {
-  public async wobble(): Promise<object> {
-    return Promise.resolve({});
-  }
-}
+app.use(cors());
+app.use(express.json());
+app.use(routes);
+
+app.listen(port, () => console.log(`Listening on port ${port}`));

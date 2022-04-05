@@ -1,4 +1,4 @@
-import { wibble, wibble2, Wobbler } from '../src';
+import { wibble, wibble2, Wobbler } from '../src/Wobbler';
 
 test('supports wibble', () => {
   expect(wibble()).toBe(true);
