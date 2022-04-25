@@ -2,6 +2,7 @@
     "compilerOptions": {
       "lib": ["ES2020"],
       "module": "commonjs",
+      "allowJs": true,
       "declaration": false,
       "removeComments": true,
       "emitDecoratorMetadata": true,
@@ -19,6 +20,11 @@
           "cacheBetweenTests": false
         }
       ]
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "bin",
+      ],
   }
   

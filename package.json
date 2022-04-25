@@ -3,31 +3,39 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "tsc -b",
-    "build:watch": "tsc -b",
-    "lint": "eslint \"**/{src,apps,libs,test}/**/*.ts\" --fix",
-    "format": "prettier --write \"**/src/**/*.ts\" \"**/tests/**/*.ts\"",
+    "start:backend:debug": "node --inspect -r ts-node/register backend/index.ts",
+    "start:backend": "node -r ts-node/register backend/index.ts",
+    "start:backend:watch": "nodemon --watch backend/**/*.ts --exec 'node -r ts-node/register backend/index.ts'",
+    "build": "npx tsc",
+    "lint": "eslint \"**/{backend,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier --write \"**/backend/**/*.ts\"",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && lint-staged",
-      "pre-push": "yarn test"
+      "pre-commit": "npm build && lint-staged",
+      "pre-push": "npm test"
     }
   },
   "lint-staged": {
-    "**/(test|src)/**/*.+(js|ts|jsx|tsx)": [
-      "yarn lint",
-      "yarn format"
+    "**/(backend)/**/*.+(js|ts|jsx|tsx)": [
+      "npm lint",
+      "npm format"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0"
+  },
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
+    "concurrently": "^7.1.0",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -35,6 +43,7 @@
     "jest": "^27.5.1",
     "jest-ts-auto-mock": "^2.1.0",
     "lint-staged": "^12.3.7",
+    "nodemon": "^2.0.15",
     "prettier": "^2.6.0",
     "ts-auto-mock": "^3.5.0",
     "ts-jest": "^27.1.3",
